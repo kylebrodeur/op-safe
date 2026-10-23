@@ -1,0 +1,32 @@
+# op-safe: the doc map for agents
+
+## This repo
+
+- [docs/quickstart.md](docs/quickstart.md): the numbered path from
+  nothing to a saved-and-cleaned secret, all commands copy-pasteable.
+- [docs/how-to.md](docs/how-to.md): day-to-day operation, grouped by
+  task: one secret to one script, per-account use, temp-root hygiene,
+  cleanup traps on error paths, orphan audits.
+- [docs/RUNBOOK.md](docs/RUNBOOK.md): the operator's reference: the full
+  command surface, the environment, every error string with its fix,
+  recovery procedures.
+- [AGENTS.md](AGENTS.md): the boundary as rules an agent obeys.
+- [CONTRIBUTING.md](CONTRIBUTING.md): setup, tests, the lint and docs
+  gates, the change bar.
+- [SECURITY.md](SECURITY.md): vulnerability reporting, scope.
+- skills/op-safe/SKILL.md: the skill form of the boundary.
+- [examples/README.md](examples/README.md): the runnable mock
+  walkthrough (`examples/demo-with-mock.sh`) with captured output.
+- tests/: the bats suite (`tests/op-access.bats`) over the mock shim in
+  `tests/mock/`, run by `tests/run-tests.sh`.
+
+## The family (AI ECP)
+
+- the family catalog (the map home; in the private control-plane repo).
+- repo-guards: governance kit (gates, hooks, CI shape).
+- actions-runner: agent pipeline kit (stages, gates, worklog).
+- agent-workspace-kit: agent-team launcher.
+- docs-policy-kit: docs and publication engine.
+- ecp-toolkit: the control plane CLI (PLANNED).
+
+Verified 2026-10-22.

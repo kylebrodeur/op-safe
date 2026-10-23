@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: The repo's own test suite (bats)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq bats jq
+          tests/run-tests.sh
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint the shell sources
+        run: |
+          shellcheck op-access.sh tests/run-tests.sh examples/demo-with-mock.sh

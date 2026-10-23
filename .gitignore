@@ -1,0 +1,5 @@
+# Scratch and OS noise
+.DS_Store
+
+# Test scratch
+tests/.bats-*
