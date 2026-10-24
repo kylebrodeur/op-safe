@@ -24,7 +24,7 @@ tests/run-tests.sh
 Expected output:
 
 ```text
-1..29
+1..34
 ok 1 mock selftest carries the shibboleth that must stay off stdout
 ...
 ok 29 save with no argument fails with the usage error
@@ -36,15 +36,28 @@ A change to `op-access.sh` with no matching test in
 ## Run the docs harness
 
 The family harness is in the private system repo and runs against this
-checkout:
+checkout. It is MAINTAINER-ONLY: it is not part of this repo's public
+test command, and a public contributor does not have it.
 
 ```bash
-tests/run-tests.sh
+# In the private family system repo, against this checkout:
+python3 tools/verify-system.py --repo <path-to-this-checkout>
 ```
 
 Every line should read `PASS`. The checks include the prose gates: no em
 or en dashes, none of the four banned wording habits (the slop gate lists
 them), and no personal identifiers in any tracked markdown.
+
+**What a public contributor runs instead** is the repo's own commands,
+which are the ones CI runs:
+
+```bash
+tests/run-tests.sh
+```
+
+That is the Bats suite, and its output is TAP: a `1..34` plan and one
+`ok` line per test. It does not print `PASS` lines, because it is not
+the family harness.
 
 ## Open a change
 

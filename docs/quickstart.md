@@ -1,4 +1,4 @@
-<!-- STATUS: VERIFIED 2026-10-22 against op-access.sh + tests/op-access.bats (29 tests passing). The mock-run outputs below were captured from a live run of examples/demo-with-mock.sh. -->
+<!-- STATUS: VERIFIED 2026-10-24 against op-access.sh + tests/op-access.bats (34 tests passing). The mock-run outputs below were captured from a live run of examples/demo-with-mock.sh. -->
 # Quickstart: from nothing to a saved-and-cleaned secret
 
 The numbered path: check the prerequisites, sign in, mint a reference,
@@ -116,7 +116,7 @@ tests/run-tests.sh
 ```
 
 ```text
-1..29
+1..34
 ok 1 mock selftest carries the shibboleth that must stay off stdout
 ...
 ok 29 save with no argument fails with the usage error

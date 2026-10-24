@@ -1,4 +1,4 @@
-<!-- STATUS: VERIFIED 2026-10-22. Every error string below is quoted from op-access.sh source every flag was checked against the case branches. -->
+<!-- STATUS: VERIFIED 2026-10-24. Every error string below is quoted from op-access.sh source every flag was checked against the case branches. -->
 # RUNBOOK.md: the operator's reference
 
 The full command surface, the environment, every error string with its

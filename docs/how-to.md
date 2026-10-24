@@ -1,4 +1,4 @@
-<!-- STATUS: VERIFIED 2026-10-22 against op-access.sh + tests/op-access.bats (29 tests passing). -->
+<!-- STATUS: VERIFIED 2026-10-24 against op-access.sh + tests/op-access.bats (34 tests passing). -->
 # How-to: day-to-day operation
 
 Task-shaped answers for the things you do repeatedly once op-safe is
