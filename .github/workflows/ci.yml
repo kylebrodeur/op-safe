@@ -9,7 +9,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: The repo's own test suite (bats)
         run: |
           sudo apt-get update -qq
@@ -19,7 +19,7 @@ jobs:
   shellcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Lint the shell sources
         run: |
           shellcheck op-access.sh tests/run-tests.sh examples/demo-with-mock.sh
